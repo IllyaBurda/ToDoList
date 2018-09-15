@@ -2,21 +2,20 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Spinner?>
-<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="425.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="forms.OneController">
+<AnchorPane prefHeight="417.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="forms.OneController">
    <children>
-      <Button fx:id="btn" layoutX="30.0" layoutY="349.0" mnemonicParsing="false" onAction="#click" prefHeight="44.0" prefWidth="110.0" text="To make!!!" />
-      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+      <Button fx:id="btnAdd" layoutX="321.0" layoutY="351.0" mnemonicParsing="false" onAction="#addButtonClicked" prefHeight="44.0" prefWidth="110.0" text="To make!!!" />
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="662.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -35,19 +34,16 @@
           </Menu>
         </menus>
       </MenuBar>
-      <TextField fx:id="name" editable="false" layoutX="14.0" layoutY="60.0" />
-      <TableView layoutX="200.0" layoutY="40.0" prefHeight="351.0" prefWidth="382.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-        </columns>
-      </TableView>
-      <TextArea fx:id="disc" layoutX="14.0" layoutY="97.0" prefHeight="89.0" prefWidth="149.0" />
-      <Spinner fx:id="spinnerHour" layoutX="15.0" layoutY="211.0" prefHeight="25.0" prefWidth="70.0" />
-      <Spinner fx:id="spinnerMin" layoutX="95.0" layoutY="211.0" prefHeight="25.0" prefWidth="70.0" />
-      <Label fx:id="lh" layoutX="29.0" layoutY="192.0" text="hour" />
-      <Label layoutX="112.0" layoutY="192.0" text="minute" />
-      <Label fx:id="deal" layoutX="7.0" layoutY="242.0" text="Click and choose what are you do" />
-      <ComboBox fx:id="combox" layoutX="10.0" layoutY="267.0" onAction="#click" prefHeight="25.0" prefWidth="157.0" />
+      <TableView fx:id="tbView" layoutX="200.0" layoutY="40.0" prefHeight="294.0" prefWidth="462.0" />
+      <TextArea fx:id="disc" editable="false" layoutX="14.0" layoutY="45.0" prefHeight="51.0" prefWidth="149.0" />
+      <Spinner fx:id="spinnerHour" disable="true" layoutX="15.0" layoutY="230.0" prefHeight="25.0" prefWidth="70.0" />
+      <Spinner fx:id="spinnerMin" disable="true" layoutX="95.0" layoutY="230.0" prefHeight="25.0" prefWidth="70.0" />
+      <Label fx:id="lh" layoutX="29.0" layoutY="209.0" text="hour" />
+      <Label layoutX="112.0" layoutY="209.0" text="minute" />
+      <ComboBox fx:id="comboxPr" disable="true" layoutX="11.0" layoutY="317.0" onAction="#click" prefHeight="25.0" prefWidth="168.0" promptText="Select Priority" />
+      <ComboBox fx:id="comboboxTypeAction" disable="true" layoutX="11.0" layoutY="267.0" prefHeight="25.0" prefWidth="168.0" promptText="Select Deal" />
+      <Spinner fx:id="spinnerTime" disable="true" layoutX="14.0" layoutY="137.0" />
+      <Label layoutX="11.0" layoutY="99.0" prefHeight="36.0" prefWidth="168.0" text="How much time would you like &#10;todo this deal" textAlignment="CENTER" />
+      <DatePicker fx:id="data" disable="true" layoutX="13.0" layoutY="177.0" />
    </children>
 </AnchorPane>

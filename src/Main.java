@@ -11,7 +11,7 @@ public class Main extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("forms/One.fxml"));
         primaryStage.setTitle(" ToDoList ");
-        primaryStage.setScene(new Scene(root, 590, 450));
+        primaryStage.setScene(new Scene(root, 720, 450));
         primaryStage.show();
 
     }
